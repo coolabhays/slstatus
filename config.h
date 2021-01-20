@@ -65,8 +65,12 @@ static const char unknown_str[] = "n/a";
  */
 static const struct arg args[] = {
 	/* function format          argument */
-	{ run_command, " [VOL: %s%%] ", "pulsemixer --get-volume | cut -d' ' -f1" },
-	{ cpu_perc, "[CPU: %s%%] ", NULL },
-	{ ram_perc, "[RAM: %s%%] ", NULL },
-	{ datetime, "%s ",           "%a %b %d %r" },
+	{ netspeed_rx, " d:%sB/s ", "wlp5s0" },
+	{ netspeed_tx, "u:%sB/s |", "wlp5s0" },
+	{ run_command, " v:%s%% |", "pulsemixer --get-volume | cut -d' ' -f1" },
+	{ temp, " t:%s°C |", "/sys/class/thermal/thermal_zone0/temp" },
+	{ cpu_perc, " c:%s%% |", NULL },
+	{ ram_perc, " r:%s%% |", NULL },
+	{ battery_perc, " b:%s%% |", "BAT0" },
+	{ datetime, " %s ",           "%a %b %d %r" },
 };
