@@ -72,5 +72,5 @@ static const struct arg args[] = {
 	{ cpu_perc, " c:%s%% |", NULL },
 	{ ram_perc, " r:%s%% |", NULL },
 	{ battery_perc, " b:%s%% |", "BAT0" },
-	{ datetime, " %s ",           "%a %b %d %r" },
+	{ datetime, " %s",           "%a %b %d %r" },
 };
